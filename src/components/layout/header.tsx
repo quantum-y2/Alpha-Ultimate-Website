@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -94,7 +95,7 @@ export function Header() {
                       : 'text-foreground/80'
                   )}
                 >
-                  {label}
+                  {link.label}
                 </Button>
               </Link>
             ))}
