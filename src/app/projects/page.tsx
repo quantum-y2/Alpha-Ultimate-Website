@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { projects } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';

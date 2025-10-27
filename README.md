@@ -20,13 +20,24 @@ To get the application running locally, follow these steps:
 
 The application will now be running on [http://localhost:9002](http://localhost:9002).
 
+## How to Log In
+
+### Admin Panel
+-   **URL**: Navigate to `/admin/login`
+-   **Email**: `admin@alphaultimate.com`
+-   **Password**: `password`
+
+### Client Portal
+-   **URL**: Navigate to `/portal/login`
+-   You can use the **Login** or **Register** tab with any dummy information to proceed to the dashboard.
+
 ## Key Features
 
 ### Public-Facing Website
 
 A professional, modern website to showcase your services and projects to the world.
 
-- **/ (Homepage)**: A dynamic homepage with a video background.
+- **/ (Homepage)**: A dynamic homepage.
 - **/services**: Lists all company services.
 - **/projects**: A showcase of your completed projects.
 - **/estimating**: A real-time cost estimator for clients.
@@ -50,10 +61,10 @@ A powerful, password-protected back-office for your team to manage all website c
 - **/admin/dashboard**: An overview of recent site activity and AI-driven insights from 'Yusra'.
 - **/admin/submissions**: View and manage all contact and career form submissions.
 - **/admin/manpower-requests**: View and manage all client manpower requests.
-- **/admin/jobs**: **[New]** Add, edit, and delete job postings that appear on the public Careers page.
-- **/admin/projects**: **[New]** Add, edit, and delete projects from your portfolio.
-- **/admin/services**: **[New]** Add, edit, and delete the services you offer.
-- **/admin/vision**: **[New]** Directly edit the content on the "Our Vision" page.
+- **/admin/jobs**: Add, edit, and delete job postings that appear on the public Careers page.
+- **/admin/projects**: Add, edit, and delete projects from your portfolio.
+- **/admin/services**: Add, edit, and delete the services you offer.
+- **/admin/vision**: Directly edit the content on the "Our Vision" page.
 
 ## AI Integration with 'Yusra'
 
