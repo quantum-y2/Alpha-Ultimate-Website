@@ -19,7 +19,7 @@ export default function Home() {
             playsInline
             className="absolute z-[-1] w-auto min-w-full min-h-full max-w-none object-cover"
           >
-            <source src="https://videos.pexels.com/video-files/3252479/3252479-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-crane-working-at-a-construction-site-4775-large.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black/70" />
