@@ -11,6 +11,7 @@ import { Logo } from '@/components/logo';
 const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/projects', label: 'Projects' },
+  { href: '/estimating', label: 'Estimating' },
   { href: '/about', label: 'About Us' },
   { href: '/vision', label: 'Our Vision' },
   { href: '/careers', label: 'Careers' },
@@ -43,7 +44,7 @@ export function Header() {
           'text-base font-medium',
           pathname === href
             ? 'text-primary'
-            : 'text-white/80 hover:text-white',
+            : isHome && !isScrolled && !isMenuOpen ? 'text-white/80 hover:text-white' : 'text-foreground/80 hover:text-foreground',
           'transition-colors duration-200'
         )}
       >
@@ -68,13 +69,13 @@ export function Header() {
         </nav>
         <div className="hidden md:flex items-center gap-2">
             <Link href="/portal/login" passHref>
-                <Button variant="outline" className="neon-border">
+                <Button variant="outline" className={cn("neon-border", isHome && !isScrolled && !isMenuOpen && "border-white text-white hover:bg-white/10 hover:text-white")}>
                     Client Portal
                 </Button>
             </Link>
         </div>
         <div className="md:hidden">
-          <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)} className={cn(isHome && !isScrolled && !isMenuOpen && "text-white hover:bg-white/10")}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
@@ -83,7 +84,19 @@ export function Header() {
         <div className="md:hidden bg-background/95 backdrop-blur-sm pb-6">
           <nav className="container flex flex-col items-center gap-4">
             {navLinks.map((link) => (
-              <NavLink key={link.href} {...link} />
+              <Link key={link.href} href={link.href} passHref>
+                <Button
+                  variant="link"
+                  className={cn(
+                    'w-full text-lg',
+                    pathname === link.href
+                      ? 'text-primary'
+                      : 'text-foreground/80'
+                  )}
+                >
+                  {label}
+                </Button>
+              </Link>
             ))}
              <Link href="/portal/login" passHref>
                 <Button variant="outline" className="w-full neon-border">

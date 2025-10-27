@@ -1,29 +1,27 @@
-import Image from 'next/image';
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PageHeader } from '@/components/page-header';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        <div className="relative h-screen w-full">
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              fill
-              className="object-cover"
-              priority
-              data-ai-hint={heroImage.imageHint}
-            />
-          )}
+        <div className="relative h-screen w-full overflow-hidden">
+           <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute z-[-1] w-auto min-w-full min-h-full max-w-none object-cover"
+          >
+            <source src="https://videos.pexels.com/video-files/3252479/3252479-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div className="absolute inset-0 bg-black/70" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white p-4">
