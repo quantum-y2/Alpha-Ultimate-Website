@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Logo } from '@/components/logo';
 
 export default function PortalLoginPage() {
   const router = useRouter();
@@ -21,7 +22,10 @@ export default function PortalLoginPage() {
   };
   
   return (
-    <div className="flex items-center justify-center py-12 px-4 min-h-[calc(100vh-12rem)]">
+    <div className="flex items-center justify-center py-12 px-4 min-h-[calc(100vh-12rem)] flex-col">
+       <div className="mb-8">
+          <Logo />
+      </div>
       <Tabs defaultValue="login" className="w-[400px]">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="login">Login</TabsTrigger>
