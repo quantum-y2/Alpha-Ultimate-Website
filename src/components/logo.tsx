@@ -22,7 +22,7 @@ export function Logo({ className }: LogoProps) {
         />
       </svg>
       <span className="font-headline font-bold text-xl tracking-tight">
-        Alpha Portal
+        Alpha Ultimate
       </span>
     </Link>
   );

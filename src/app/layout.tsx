@@ -15,7 +15,7 @@ const fontHeadline = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Alpha Portal',
+  title: 'Alpha Ultimate Ltd.',
   description: 'Alpha Ultimate Ltd. - Beyond the every limit...',
 };
 

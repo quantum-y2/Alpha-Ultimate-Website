@@ -4,8 +4,9 @@ import { generateYusraInsight } from '@/ai/flows/generate-yusra-insight';
 import { z } from 'zod';
 import { revalidatePath } from 'next/cache';
 
-// In a real application, these actions would interact with a database.
+// In a real application, these actions would interact with a database and an email service.
 // For now, they simulate the logic and revalidate paths to show UI updates.
+const SUBMISSION_EMAIL = 'info@alpha-ultimate.com';
 
 export async function runYusraInsight() {
   try {
@@ -42,7 +43,8 @@ const submissionSchema = z.object({
 export async function submitContactForm(data: FormData) {
     const parsed = submissionSchema.safeParse(Object.fromEntries(data.entries()));
     if (parsed.success) {
-        console.log("Contact form submitted:", parsed.data);
+        console.log(`Simulating sending contact form to ${SUBMISSION_EMAIL}:`, parsed.data);
+        // In a real app, you'd use a service like Nodemailer or SendGrid here.
         return { success: true, message: 'Your inquiry has been submitted successfully!' };
     }
     return { success: false, message: 'Invalid data.'};
@@ -51,7 +53,8 @@ export async function submitContactForm(data: FormData) {
 export async function submitCareerForm(data: FormData) {
     const parsed = submissionSchema.safeParse(Object.fromEntries(data.entries()));
      if (parsed.success) {
-        console.log("Career form submitted:", parsed.data);
+        console.log(`Simulating sending CV to ${SUBMISSION_EMAIL}:`, parsed.data);
+        // In a real app, you'd handle file upload and then email.
         return { success: true, message: 'Your application has been received. Thank you!' };
     }
     return { success: false, message: 'Invalid data.'};
@@ -59,5 +62,6 @@ export async function submitCareerForm(data: FormData) {
 
 export async function submitManpowerRequest(data: FormData) {
     console.log("Manpower request submitted:", Object.fromEntries(data.entries()));
+     // In a real app, you would save this to the database.
     return { success: true, message: 'Your manpower request has been submitted successfully.' };
 }
