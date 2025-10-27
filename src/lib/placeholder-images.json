@@ -1,3 +1,88 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A bustling construction site at dusk, symbolizing activity and progress.",
+      "imageUrl": "https://images.unsplash.com/photo-1599995903128-531fc7fb694b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc2MTUyMzA1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction site"
+    },
+    {
+      "id": "service-construction",
+      "description": "Architectural blueprint and hard hat on a table.",
+      "imageUrl": "https://images.unsplash.com/photo-1729551610640-e8adee1172e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb25zdHJ1Y3Rpb24lMjBibHVlcHJpbnR8ZW58MHx8fHwxNzYxNTM0NTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction blueprint"
+    },
+    {
+      "id": "service-hr",
+      "description": "A diverse group of construction workers standing together.",
+      "imageUrl": "https://images.unsplash.com/photo-1552879890-3a06dd3a06c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzfGVufDB8fHx8MTc2MTQ2ODcwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction workers"
+    },
+    {
+      "id": "service-cleaning",
+      "description": "A newly constructed building with sparkling clean windows.",
+      "imageUrl": "https://images.unsplash.com/photo-1661023794080-fe48f35bf58c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjbGVhbiUyMGJ1aWxkaW5nfGVufDB8fHx8MTc2MTU2NTY5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean building"
+    },
+    {
+      "id": "project-riyadh-metro-1",
+      "description": "Riyadh metro station under construction.",
+      "imageUrl": "https://images.unsplash.com/photo-1761069234641-3a68266c4740?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtZXRybyUyMGNvbnN0cnVjdGlvbnxlbnwwfHx8fDE3NjE1NjU2OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "metro construction"
+    },
+    {
+      "id": "project-riyadh-metro-2",
+      "description": "Interior of a modern metro train.",
+      "imageUrl": "https://images.unsplash.com/photo-1704123519634-e7eba9088e8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwdHJhaW58ZW58MHx8fHwxNzYxNTY1Njk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern train"
+    },
+    {
+      "id": "project-neom-city-1",
+      "description": "Futuristic architectural rendering of Neom city.",
+      "imageUrl": "https://images.unsplash.com/photo-1535021131637-96f0c931f5d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmdXR1cmlzdGljJTIwY2l0eXxlbnwwfHx8fDE3NjE0NDA4OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "futuristic city"
+    },
+    {
+      "id": "project-jeddah-tower-1",
+      "description": "Jeddah Tower touching the clouds.",
+      "imageUrl": "https://images.unsplash.com/photo-1630973433069-4dafa1a5591b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0YWxsJTIwc2t5c2NyYXBlcnxlbnwwfHx8fDE3NjE1NjU2OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tall skyscraper"
+    },
+    {
+      "id": "project-king-abdullah-financial-district-1",
+      "description": "Skyscrapers of King Abdullah Financial District.",
+      "imageUrl": "https://images.unsplash.com/photo-1723380726942-2d5945a45b23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaW5hbmNpYWwlMjBkaXN0cmljdHxlbnwwfHx8fDE3NjE1MDQzMTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "financial district"
+    },
+    {
+      "id": "about-slideshow-1",
+      "description": "Team meeting in a modern office.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0ZWFtJTIwbWVldGluZ3xlbnwwfHx8fDE3NjE1NDUxNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team meeting"
+    },
+    {
+      "id": "about-slideshow-2",
+      "description": "Handshake deal between two business professionals.",
+      "imageUrl": "https://images.unsplash.com/photo-1686771416282-3888ddaf249b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidXNpbmVzcyUyMGhhbmRzaGFrZXxlbnwwfHx8fDE3NjE1NTQ2Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business handshake"
+    },
+    {
+      "id": "about-slideshow-3",
+      "description": "Construction worker looking at a sunset over a project site.",
+      "imageUrl": "https://images.unsplash.com/photo-1754102874367-87e2a62e4431?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb25zdHJ1Y3Rpb24lMjBzdW5zZXR8ZW58MHx8fHwxNzYxNDk3MDU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction sunset"
+    },
+    {
+      "id": "vision-page-image",
+      "description": "Abstract image of data streams and neural networks.",
+      "imageUrl": "https://images.unsplash.com/photo-1644325349124-d1756b79dd42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkYXRhJTIwbmV0d29ya3xlbnwwfHx8fDE3NjE1NjU2OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data network"
+    },
+    {
+      "id": "logo-image",
+      "description": "Alpha Ultimate Ltd. company logo",
+      "imageUrl": "https://images.unsplash.com/photo-1687523327554-fa9f50423489?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21wYW55JTIwbG9nb3xlbnwwfHx8fDE3NjE1MzkyNzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "company logo"
+    }
+  ]
 }
