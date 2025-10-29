@@ -11,12 +11,20 @@ import { useState } from 'react';
 export default function AdminLoginPage() {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
+    const [email, setEmail] = useState('admin@alphaultimate.com');
+    const [password, setPassword] = useState('password');
 
     const handleLogin = () => {
         setIsLoading(true);
         // Simulate API call for login
         setTimeout(() => {
-            router.push('/admin/dashboard');
+            // In a real app, you'd validate credentials
+            if (email === 'admin@alphaultimate.com' && password === 'password') {
+              router.push('/admin/dashboard');
+            } else {
+              alert('Invalid credentials');
+              setIsLoading(false);
+            }
         }, 1500);
     };
 
@@ -33,11 +41,11 @@ export default function AdminLoginPage() {
                 <CardContent className="space-y-4">
                     <div className="space-y-2">
                         <Label htmlFor="email">Email</Label>
-                        <Input id="email" type="email" placeholder="admin@alphaultimate.com" defaultValue="admin@alphaultimate.com"/>
+                        <Input id="email" type="email" placeholder="admin@alphaultimate.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
                     </div>
                     <div className="space-y-2">
                         <Label htmlFor="password">Password</Label>
-                        <Input id="password" type="password" defaultValue="password"/>
+                        <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                     </div>
                     <Button onClick={handleLogin} disabled={isLoading} className="w-full neon-button">
                         {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}

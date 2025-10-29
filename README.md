@@ -37,7 +37,7 @@ The application will now be running on [http://localhost:9002](http://localhost:
 
 A professional, modern website to showcase your services and projects to the world.
 
-- **/ (Homepage)**: A dynamic homepage.
+- **/ (Homepage)**: A dynamic homepage with a video background.
 - **/services**: Lists all company services.
 - **/projects**: A showcase of your completed projects.
 - **/estimating**: A real-time cost estimator for clients.
