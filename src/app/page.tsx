@@ -1,23 +1,29 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
+    const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
+
     return (
         <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
                 <div className="relative h-screen w-full overflow-hidden">
-                    <video
-                        src="https://videos.pexels.com/video-files/3253412/3253412-hd_1920_1080_25fps.mp4"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-                    />
+                    {heroImage && (
+                        <Image
+                            src={heroImage.imageUrl}
+                            alt={heroImage.description}
+                            fill
+                            priority
+                            className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+                            data-ai-hint={heroImage.imageHint}
+                        />
+                    )}
                     <div className="absolute inset-0 bg-black/70" />
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-center text-white p-4">

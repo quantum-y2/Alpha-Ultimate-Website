@@ -6,9 +6,10 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Users, PlusCircle, Trash2 } from 'lucide-react';
+import { v4 as uuidv4 } from 'uuid';
 
 type LineItem = {
-  id: number;
+  id: string;
   description: string;
   quantity: number;
   rate: number;
@@ -17,11 +18,11 @@ type LineItem = {
 
 export function ManpowerEstimator() {
   const [items, setItems] = useState<LineItem[]>([
-    { id: 1, description: 'General Laborer', quantity: 0, rate: 0, unit: 'month' },
-    { id: 2, description: 'Carpenter', quantity: 0, rate: 0, unit: 'month' },
+    { id: uuidv4(), description: 'General Laborer', quantity: 0, rate: 0, unit: 'month' },
+    { id: uuidv4(), description: 'Carpenter', quantity: 0, rate: 0, unit: 'month' },
   ]);
 
-  const handleItemChange = (id: number, field: keyof Omit<LineItem, 'id'>, value: string | number) => {
+  const handleItemChange = (id: string, field: keyof Omit<LineItem, 'id'>, value: string | number) => {
     setItems(prevItems =>
       prevItems.map(item =>
         item.id === id ? { ...item, [field]: value } : item
@@ -30,10 +31,10 @@ export function ManpowerEstimator() {
   };
   
   const addNewItem = () => {
-    setItems(prev => [...prev, { id: Date.now(), description: '', quantity: 0, rate: 0, unit: 'month' }]);
+    setItems(prev => [...prev, { id: uuidv4(), description: '', quantity: 0, rate: 0, unit: 'month' }]);
   };
 
-  const removeItem = (id: number) => {
+  const removeItem = (id: string) => {
     setItems(prev => prev.filter(item => item.id !== id));
   };
 

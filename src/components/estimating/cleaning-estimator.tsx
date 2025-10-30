@@ -6,9 +6,10 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Sparkles, PlusCircle, Trash2 } from 'lucide-react';
+import { v4 as uuidv4 } from 'uuid';
 
 type LineItem = {
-  id: number;
+  id: string;
   description: string;
   quantity: number;
   rate: number;
@@ -17,11 +18,11 @@ type LineItem = {
 
 export function CleaningEstimator() {
   const [items, setItems] = useState<LineItem[]>([
-    { id: 1, description: 'Initial Post-Construction Cleaning', quantity: 0, rate: 0, unit: 'm²' },
-    { id: 2, description: 'Final Handover Cleaning', quantity: 0, rate: 0, unit: 'm²' },
+    { id: uuidv4(), description: 'Initial Post-Construction Cleaning', quantity: 0, rate: 0, unit: 'm²' },
+    { id: uuidv4(), description: 'Final Handover Cleaning', quantity: 0, rate: 0, unit: 'm²' },
   ]);
 
-  const handleItemChange = (id: number, field: keyof Omit<LineItem, 'id'>, value: string | number) => {
+  const handleItemChange = (id: string, field: keyof Omit<LineItem, 'id'>, value: string | number) => {
     setItems(prevItems =>
       prevItems.map(item =>
         item.id === id ? { ...item, [field]: value } : item
@@ -30,10 +31,10 @@ export function CleaningEstimator() {
   };
   
   const addNewItem = () => {
-    setItems(prev => [...prev, { id: Date.now(), description: '', quantity: 0, rate: 0, unit: 'm²' }]);
+    setItems(prev => [...prev, { id: uuidv4(), description: '', quantity: 0, rate: 0, unit: 'm²' }]);
   };
 
-  const removeItem = (id: number) => {
+  const removeItem = (id: string) => {
     setItems(prev => prev.filter(item => item.id !== id));
   };
 
@@ -140,6 +141,6 @@ export function CleaningEstimator() {
           Disclaimer: This is a preliminary estimate. All cleaning projects require a site visit for an accurate and final quotation. Rates include standard cleaning materials.
         </p>
       </CardFooter>
-    </Card>
+    </card>
   );
 }
